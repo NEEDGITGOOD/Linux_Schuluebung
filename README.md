@@ -4,7 +4,7 @@ Kurze Schulübung in der Schule für das automatische Erstellen einer Linux Date
 ### Script Version 1.
 
 ````bash
-curl -sSL https://raw.githubusercontent.com/NEEDGITGOOD/Linux_Schuluebung/main.sh | bash && cat info.txt
+curl -sSL https://raw.githubusercontent.com/NEEDGITGOOD/Linux_Schuluebung/main/main.sh | bash && cat info.txt
 ````
 
 ### Script Version 2.

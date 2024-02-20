@@ -1,23 +1,14 @@
-### Script Version 1.
+# Get IP
+ip addr show | grep 'inet ' | awk '{print $2}' > info.txt
 
-````bash
-curl -sSL https://raw.githubusercontent.com/NEEDGITGOOD/Linux_Schuluebung/main.sh | bash && cat info.txt
-````
+# Get MAC
+ip link show | awk '/ether/ {print $2}' >> info.txt
 
-### Script Version 2.
+# Get Gateway
+ip route | awk '/default/ {print $3}' >> info.txt
 
-#### Install ncmli (network-manager)
+# Get Free RAM
+free -h | grep 'Mem' | awk '{print "Arbeitsspeicher: " $2}' >> info.txt
 
-````bash
-apt-get install network-manager
-````
-
-#### Run Command
-
-````bash
-nmcli >info.txt && free >>info.txt && lsblk >>info.txt
-````
-
-### Disclaimer
-
-Use at your own Risk. Not responsible for anything.
+# Get Free Disk Space
+df -h | grep '/dev/' | awk '{print "Festplattenspeicher: " $2}' >> info.txt.txt

@@ -20,8 +20,3 @@ apt-get install network-manager
 ````bash
 nmcli >info.txt && free >>info.txt && lsblk >>info.txt
 ````
-
-### Disclaimer
-
-Use at your own Risk. Not responsible for anything.
-

@@ -11,4 +11,4 @@ ip route | awk '/default/ {print $3}' >> info.txt
 free -h | grep 'Mem' | awk '{print "Arbeitsspeicher: " $2}' >> info.txt
 
 # Get Free Disk Space
-df -h | grep '/dev/' | awk '{print "Festplattenspeicher: " $2}' >> info.txt.txt
+df -h | grep '/dev/' | awk '{print "Festplattenspeicher: " $2}' >> info.txt
